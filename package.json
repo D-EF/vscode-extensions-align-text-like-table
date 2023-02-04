@@ -4,7 +4,7 @@
   "publisher":"align-text-like-table",
   "description": "align that text like a table",
   "repository":"https://github.com/D-EF/vscode-plugin-align-text-like-table",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.54.0"
   },
