@@ -1,0 +1,37 @@
+{
+	"folders": [
+		{
+			"path": ".",
+		}
+	],
+	"settings": {
+		"editor.inlayHints.enabled": "off",
+		"editor.fontFamily": "Ubuntu Mono derivative Powerline",
+		"editor.foldingStrategy": "indentation",
+		"html.completion.attributeDefaultValue": "empty",
+		"editor.formatOnSave": false,
+		"editor.tokenColorCustomizations": {
+			"textMateRules": [
+				{
+					"scope": "variable.parameter", //形参
+					"settings": {
+						"fontStyle": "italic",
+						"foreground": "#8ff"
+					}
+				}
+			]
+		},
+		"workbench.colorCustomizations": {
+		} 
+	},
+	"extensions": {
+		"recommendations": [
+			"obkoro1.korofileheader",
+			"albymor.increment-selection",
+			"wwm.better-align",
+			"formulahendry.auto-rename-tag",
+			"formulahendry.auto-close-tag",
+			"jock.svg"
+		]
+	}
+}

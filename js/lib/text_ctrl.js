@@ -168,8 +168,8 @@ function align_Text(str,_mapping_str){
         transform_lines.push(org_lines[i].slice(index_FirstNotSpace(org_lines[i])).split(config__text_ctrl.selector__separator));
     }
     
-    console.log(indent)
-    console.log(transform_lines);
+    // console.log(indent)
+    // console.log(transform_lines);
 
     return fill_LineList(transform_lines,
         _mapping_str
