@@ -80,8 +80,8 @@ function check_BeforeNotSpace(str,index){
 }
 
 /** 填充空格以对齐
- * @param {string[][]}     list_line    已经被分隔符分开的二维数组数据
- * @param {[searchValue:string|RegExp,replaceValue:string][]} [_mapping_str] 
+ * @param {string[][]}                                          list_line        已经被分隔符分开的二维数组数据
+ * @param {[searchValue:string|RegExp,replaceValue:string][]}   [_mapping_str]   文本替换, 作为参数传入到每个单元格, 逆序运行replace函数
  * @returns {string[][]}
  */
 function fill_LineList(list_line=false,_mapping_str){
@@ -133,8 +133,8 @@ function fill_LineList(list_line=false,_mapping_str){
 
 
 /** 计算字符串渲染宽度
- * @param {string} str 
- * @return {number}
+ * @param {string} str 字符串
+ * @return {number} 渲染宽度
  */
 function calc_RenderWidth(str){
     var cj=str.match(/[\u2E81-\uffff]/g),
@@ -147,10 +147,10 @@ function calc_RenderWidth(str){
         (hw?hw.length:0);
 }
 
-/** 
- * @param {string} str 
- * @param {[RegExp|string,string][]} _mapping_str 
- * @returns 
+/** 对齐文本
+ * @param {string}                      str 源文本字符串
+ * @param {[RegExp|string,string][]}    [_mapping_str] 文本替换, 作为参数传入到每个单元格, 逆序运行replace函数
+ * @returns {string} 返回对齐后的文本
  */
 function align_Text(str,_mapping_str){
     var org_lines=str.split('\r\n')

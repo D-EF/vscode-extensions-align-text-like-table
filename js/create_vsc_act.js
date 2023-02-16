@@ -2,8 +2,8 @@
  * @Author: Darth_Eternalfaith darth_ef@hotmail.com
  * @Date: 2023-02-04 19:49:51
  * @LastEditors: Darth_Eternalfaith darth_ef@hotmail.com
- * @LastEditTime: 2023-02-09 12:49:51
- * @FilePath: \align-text-like-table\js\create_vsc_act.js
+ * @LastEditTime: 2023-02-16 23:46:50
+ * @FilePath: \vscode-extensions-align-text-like-table\js\create_vsc_act.js
  * @Description: 
  * 
  * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved. 
@@ -22,6 +22,10 @@ function check_Editor(){
 	}
 }
 
+
+/** 找到需要修改的行
+ * @returns {vscode.Range[]} 
+ */
 function find_Block(){
 	var rtn=[];
 	var i,j,k,l;
@@ -68,7 +72,8 @@ function find_Block(){
 			
 			str_range=new vscode.Range(new vscode.Position(j,0),new vscode.Position(k,temp_str.length));
 		}else{
-			str_range=new vscode.Range(new vscode.Position(editor.selections[i].start.line,0),new vscode.Position(editor.selections[i].end.line+1,0));
+			temp_str=editor.document.lineAt(editor.selections[i].end.line).text;
+			str_range=new vscode.Range(new vscode.Position(editor.selections[i].start.line,0),new vscode.Position(editor.selections[i].end.line,temp_str.length));
 			// editor.selections[i].end.character
 		}
 		rtn.push(str_range);
@@ -76,6 +81,10 @@ function find_Block(){
 	return rtn;
 }
 
+
+/** 对齐文本函数
+ * @param {string} [_mapping_str] 文本替换, 作为参数传入到每个单元格, 逆序运行replace函数
+ */
 function create_AlignFnc(_mapping_str){
 	return () => {
 		var q=vscode.workspace.getConfiguration("align-text-like-table");
@@ -106,6 +115,7 @@ function create_AlignFnc(_mapping_str){
 		});
 	};
 }
+
 
 module.exports={
     create_AlignFnc

@@ -1,10 +1,11 @@
 {
   "name": "align-text-like-table",
   "displayName": "align text like table",
-  "publisher":"align-text-like-table",
+  "publisher": "align-text-like-table",
   "description": "align that text like a table",
-  "repository":"https://github.com/D-EF/vscode-extensions-align-text-like-table",
-  "version": "0.0.3",
+  "repository": "https://github.com/D-EF/vscode-extensions-align-text-like-table",
+  "version": "1.0.0",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.54.0"
   },
@@ -27,27 +28,27 @@
         "title": "align like table ex special symbols"
       }
     ],
-    "configuration":{
+    "configuration": {
       "title": "align-text-like-table",
       "properties": {
-        "align-text-like-table.selector__render_half__full_width_characters":{
-          "type":"string",
-          "default":"[]",
+        "align-text-like-table.selector__render_half__full_width_characters": {
+          "type": "string",
+          "default": "[]",
           "description": "使用正则表达式标记你当前字体中被当作半角(半型)字符进行渲染但是插件却认为那是全角字符的字符"
         },
-        "align-text-like-table.selector__render_full__half_width_characters":{
-          "type":"string",
-          "default":"[]",
+        "align-text-like-table.selector__render_full__half_width_characters": {
+          "type": "string",
+          "default": "[]",
           "description": "使用正则表达式标记你当前字体中被当作全角(全型)字符进行渲染但是插件却认为那是半角字符的字符"
         },
-        "align-text-like-table.selector__separator":{
-          "type":"string",
-          "default":"(?: {5,})|(?:\t\t+)",
+        "align-text-like-table.selector__separator": {
+          "type": "string",
+          "default": "(?: {5,})|(?:\t\t+)",
           "description": "使用正则表达式标记分隔符"
         },
-        "align-text-like-table.separator__align_after":{
-          "type":"string",
-          "default":"     ",
+        "align-text-like-table.separator__align_after": {
+          "type": "string",
+          "default": "     ",
           "description": "对齐后追加的分隔符"
         },
         "align-text-like-table.justification": {
